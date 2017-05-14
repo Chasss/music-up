@@ -96,7 +96,38 @@ public class bullet : MonoBehaviour {
                 Destroy(this.gameObject);
             }
         }
-
+        else if (type == bulletType.leftup)
+        {
+            transform.Translate(new Vector3(-1, 1, 0) * speed * Time.deltaTime);
+            if (transform.position.x < -2.92f)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        else if (type == bulletType.leftdown)
+        {
+            transform.Translate(new Vector3(-1,-1, 0) * speed * Time.deltaTime);
+            if (transform.position.x < -2.92f)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        else if (type == bulletType.rightup)
+        {
+            transform.Translate(new Vector3(1, 1, 0) * speed * Time.deltaTime);
+            if (transform.position.x >2.92f)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        else if (type == bulletType.rightdown)
+        {
+            transform.Translate(new Vector3(1, -1, 0) * speed * Time.deltaTime);
+            if (transform.position.x > 2.92f)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 
 }
