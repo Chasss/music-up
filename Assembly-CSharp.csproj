@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6CF103BE-FBB2-A1CB-6A1E-C13ADD8A3090}</ProjectGuid>
+    <ProjectGuid>{42C4E9D8-7E52-9117-E0C4-721A37D23662}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,6 +54,7 @@
      <Compile Include="Assets\script\spawn2.cs" />
      <Compile Include="Assets\script\spawn3.cs" />
      <Compile Include="Assets\script\spawn5.cs" />
+     <Compile Include="Assets\script\start_controller.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/软件/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
