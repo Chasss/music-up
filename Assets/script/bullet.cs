@@ -37,7 +37,8 @@ public class bullet : MonoBehaviour {
         }
         else if (type == bulletType.down)
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
+            this.transform.eulerAngles = new Vector3(180,0,0);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
             if (transform.position.y < -4.25f)
             {
                 Destroy(this.gameObject);
@@ -45,7 +46,8 @@ public class bullet : MonoBehaviour {
         }
         else if (type == bulletType.left)
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            this.transform.eulerAngles = new Vector3(0, 0, 90);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
             if (transform.position.x < -2.5f)
             {
                 Destroy(this.gameObject);
@@ -53,7 +55,8 @@ public class bullet : MonoBehaviour {
         } 
         else if (type == bulletType.right)
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            this.transform.eulerAngles = new Vector3(0, 0, -90);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
             if (transform.position.x > 2.5f)
             {
                 Destroy(this.gameObject);
@@ -98,7 +101,8 @@ public class bullet : MonoBehaviour {
         }
         else if (type == bulletType.leftup)
         {
-            transform.Translate(new Vector3(-1, 1, 0) * speed * Time.deltaTime);
+            this.transform.eulerAngles = new Vector3(0, 0, 45);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
             if (transform.position.x < -2.92f)
             {
                 Destroy(this.gameObject);
@@ -106,7 +110,8 @@ public class bullet : MonoBehaviour {
         }
         else if (type == bulletType.leftdown)
         {
-            transform.Translate(new Vector3(-1,-1, 0) * speed * Time.deltaTime);
+            this.transform.eulerAngles = new Vector3(0, 0, 135);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
             if (transform.position.x < -2.92f)
             {
                 Destroy(this.gameObject);
@@ -114,7 +119,8 @@ public class bullet : MonoBehaviour {
         }
         else if (type == bulletType.rightup)
         {
-            transform.Translate(new Vector3(1, 1, 0) * speed * Time.deltaTime);
+            this.transform.eulerAngles = new Vector3(0, 0, -45);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
             if (transform.position.x >2.92f)
             {
                 Destroy(this.gameObject);
@@ -122,7 +128,8 @@ public class bullet : MonoBehaviour {
         }
         else if (type == bulletType.rightdown)
         {
-            transform.Translate(new Vector3(1, -1, 0) * speed * Time.deltaTime);
+            this.transform.eulerAngles = new Vector3(0, 0, -135);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
             if (transform.position.x > 2.92f)
             {
                 Destroy(this.gameObject);
