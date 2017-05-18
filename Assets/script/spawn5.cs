@@ -3,44 +3,34 @@ using System.Collections;
 
 public class spawn5 : MonoBehaviour {
 
-    public GameObject[] bullet;
-
+    public GameObject bullet;
+    public float angle = 0;
+    private float framcount = 9;
     public float x=0;
 
 
-	
-	// Update is called once per frame
-	void Update () {
 
-        if(GameController._instance.framecount == 2913)
+    // Update is called once per frame
+    void Update () {
+
+        if(GameController._instance.framecount >=3510&& GameController._instance.framecount <=3700)
         {
-            x = transform.position.x;
-            fire();
-        }
-        else if(GameController._instance.framecount == 2931)
-        {
-            x+=1.5f;
-            fire();
-        }
-        else if (GameController._instance.framecount == 2949)
-        {
-            x += 1.5f;
-            fire();
+            framcount++;
+            if(framcount == 15)
+            {
+                fire(angle);
+                angle -= 15;
+                framcount = 0;
+            }
         }
 	
 	}
 
 
-    void fire()
+    void fire(float angle)
     {
-        GameObject.Instantiate(bullet[0], new Vector3(x, transform.position.y, 0), Quaternion.identity);
-        GameObject.Instantiate(bullet[1], new Vector3(x, transform.position.y, 0), Quaternion.identity);
-        GameObject.Instantiate(bullet[2], new Vector3(x, transform.position.y, 0), Quaternion.identity);
-        GameObject.Instantiate(bullet[3], new Vector3(x, transform.position.y, 0), Quaternion.identity);
-        GameObject.Instantiate(bullet[4], new Vector3(x, transform.position.y, 0), Quaternion.identity);
-        GameObject.Instantiate(bullet[5], new Vector3(x, transform.position.y, 0), Quaternion.identity);
-        GameObject.Instantiate(bullet[6], new Vector3(x, transform.position.y, 0), Quaternion.identity);
-        GameObject.Instantiate(bullet[7], new Vector3(x, transform.position.y, 0), Quaternion.identity);
+        this.transform.eulerAngles = new Vector3(0, 0, angle);
+        GameObject.Instantiate(bullet, transform.position, transform.rotation);
 
     }
 }
