@@ -14,7 +14,7 @@ public class spawn1 : MonoBehaviour {
 	void FixedUpdate () {
         if (!GameController._instance.isGamePause)
         {
-            if (GameController._instance.framecount < 2383 || GameController._instance.framecount > 2465 && GameController._instance.framecount <4450)
+            if (GameController._instance.framecount < 2383 || GameController._instance.framecount > 2465 && GameController._instance.framecount <3555)
             {
                 if (GameController._instance.framecount > 220)
                 {
@@ -24,6 +24,16 @@ public class spawn1 : MonoBehaviour {
                         fire();
                         framecount = 0;
                     }
+                }
+            }
+            else if(GameController._instance.framecount >= 3555&& GameController._instance.framecount < 4450)
+            {
+                if (GameController._instance.framecount == 3555) framecount = 61;
+                framecount++;
+                if(framecount == 62)
+                {
+                    fire();
+                    framecount = 0;
                 }
             }
             else framecount = 0;
