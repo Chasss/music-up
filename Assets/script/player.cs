@@ -50,4 +50,13 @@ public class player : MonoBehaviour
 
 
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.tag == "bullet")
+        {
+            GameController._instance.endGame();
+        }
+    }
 }

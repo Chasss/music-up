@@ -66,12 +66,16 @@
     <Compile Include="Assets\script\BackgrondTransform.cs" />
     <Compile Include="Assets\script\GameController.cs" />
     <Compile Include="Assets\script\bullet.cs" />
+    <Compile Include="Assets\script\finalBullet.cs" />
+    <Compile Include="Assets\script\finalshoot.cs" />
+    <Compile Include="Assets\script\gameover.cs" />
     <Compile Include="Assets\script\player.cs" />
     <Compile Include="Assets\script\spawn.cs" />
     <Compile Include="Assets\script\spawn1.cs" />
     <Compile Include="Assets\script\spawn2.cs" />
     <Compile Include="Assets\script\spawn3.cs" />
     <Compile Include="Assets\script\spawn5.cs" />
+    <Compile Include="Assets\script\spawn6.cs" />
     <Compile Include="Assets\script\start_controller.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
